@@ -1,0 +1,6 @@
+{
+  "name": "star-wars-top-trumps",
+  "dependencies": {
+    "materialize": "0.97.6"
+  }
+}
