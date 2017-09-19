@@ -7,7 +7,6 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('/star-wars-top-trumps', { path: '/*path' });
   this.route('index', { path: '' });
   this.route('people');
   this.route('starships');
