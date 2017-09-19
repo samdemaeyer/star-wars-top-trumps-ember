@@ -1,0 +1,28 @@
+<div class="row">
+  {{#each collection as |starship i|}}
+    <div class="col s12 m6">
+      <div class="card {{if starship.hasBiggerMass 'teal' 'red'}} accent-4">
+        <div class="card-content white-text">
+          <h3 class="center-align">Wins: {{unless i leftWinCount rightWinCount}}</h3>
+          <h4 class="card-title center-align">{{starship.name}}</h4>
+          <ul>
+            <li><h5>Crew: {{starship.crew}}</h5></li>
+            <li>MGLT: {{starship.MGLT}}</li>
+            <li>Name: {{starship.name}}</li>
+            <li>Model: {{starship.model}}</li>
+            <li>Length: {{starship.length}}</li>
+            <li>Passengers: {{starship.passengers}}</li>
+            <li>Consumables: {{starship.consumables}}</li>
+            <li>Manufacturer: {{starship.manufacturer}}</li>
+            <li>Starship class: {{starship.starship_class}}</li>
+            <li>Cargo capacity: {{starship.cargo_capacity}}</li>
+            <li>Cost in credits: {{starship.cost_in_credits}}</li>
+            <li>Hyperdrive rating: {{starship.hyperdrive_rating}}</li>
+            <li>Max atmosphering speed: {{starship.max_atmosphering_speed}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
+{{partial 'partials/refresh-btn'}}

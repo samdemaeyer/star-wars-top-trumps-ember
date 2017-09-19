@@ -1,12 +1,12 @@
 <div class="row">
-  {{#each people as |person i|}}
+  {{#each collection as |person i|}}
     <div class="col s12 m6">
       <div class="card {{if person.hasBiggerMass 'teal' 'red'}} accent-4">
         <div class="card-content white-text">
-          <h3>{{unless i leftWinCount rightWinCount}}</h3>
-          <span class="card-title">{{person.name}}</span>
+          <h3 class="center-align">Wins: {{unless i leftWinCount rightWinCount}}</h3>
+          <h4 class="card-title center-align">{{person.name}}</h4>
           <ul>
-            <li>Mass: {{person.mass}}</li>
+            <li><h5>Mass: {{person.mass}}</h5></li>
             <li>Name: {{person.name}}</li>
             <li>Gender: {{person.gender}}</li>
             <li>Height: {{person.height}}</li>
@@ -19,5 +19,5 @@
       </div>
     </div>
   {{/each}}
-  <button class="waves-effect waves-light btn-large" onclick={{action 'shuffle'}}>Shuffle</button>
 </div>
+{{partial 'partials/refresh-btn'}}

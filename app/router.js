@@ -8,6 +8,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('people', { path: '/people' });
+  this.route('starships');
 });
 
 export default Router;
