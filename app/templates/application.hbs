@@ -12,5 +12,13 @@
   </nav>
 </div>
 <div class="container">
+  <div class="mobile-nav center-align">
+    {{#link-to 'people' class='waves-effect waves-light btn-large blue darken-4'}}
+      <i class="material-icons left">people</i> People
+    {{/link-to}}
+    {{#link-to 'starships' class='waves-effect waves-light btn-large blue darken-4'}}
+      <i class="material-icons right">star</i> Starships
+    {{/link-to}}
+  </div>
   {{outlet}}
 </div>
