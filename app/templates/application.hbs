@@ -1,24 +1,16 @@
-<div class="row">
-  <nav class="blue-grey darken-1">
-    <div class="nav-wrapper">
-      <div class="col s12">
-        {{link-to 'Star Wars Top Trumps' 'index' class='brand-logo'}}
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li>{{link-to 'People' 'people'}}</li>
-          <li>{{link-to 'Starships' 'starships'}}</li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</div>
-<div class="container">
-  <div class="mobile-nav center-align">
-    {{#link-to 'people' class='waves-effect waves-light btn-large blue darken-4'}}
-      <i class="material-icons left">people</i> People
-    {{/link-to}}
-    {{#link-to 'starships' class='waves-effect waves-light btn-large blue darken-4'}}
-      <i class="material-icons right">star</i> Starships
-    {{/link-to}}
+{{#bs-navbar type=type backgroundColor=type collapsed=collapsed onCollapse=(action (mut collapsed) true) class="mb-4" as |navbar|}}
+  <div class="navbar-header">
+    {{#link-to "index" class="navbar-brand"}}Star Wars Top Trumps{{/link-to}}
   </div>
+  {{navbar.toggle}}
+  {{#navbar.content}}
+    {{#navbar.nav class="ml-auto" as |nav|}}
+      {{#nav.item}}{{#nav.link-to "people"}}<i class="fas fa-user-shield"></i> People{{/nav.link-to}}{{/nav.item}}
+      {{#nav.item}}{{#nav.link-to "starships"}}<i class="fas fa-star"></i> Starships{{/nav.link-to}}{{/nav.item}}
+    {{/navbar.nav}}
+  {{/navbar.content}}
+{{/bs-navbar}}
+
+<div class="container pt-4">
   {{outlet}}
 </div>

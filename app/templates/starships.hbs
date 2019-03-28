@@ -1,13 +1,13 @@
-<div class="row">
-  <h3 class="center-align">Starships</h3>
+<h2 class="mb-4 text-center">Starships</h2>
+<div class="row mb-4">
   {{#each collection as |starship i|}}
-    <div class="col s12 m6">
-      <div class="card {{if starship.hasBiggerMass 'teal' 'red'}} accent-4">
-        <div class="card-content white-text">
-          <h3 class="center-align">Wins: {{unless i leftWinCount rightWinCount}}</h3>
-          <h4 class="card-title center-align">{{starship.name}}</h4>
+    <div class="col col-md-6">
+      <h2 class="text-center">Wins: {{unless i leftWinCount rightWinCount}}</h2>
+      <div class="card {{if starship.hasBiggerMass 'border-success'}}">
+        <div class="card-body">
+          <h4 class="card-title mb-2 text-muted">{{starship.name}}</h4>
           <ul>
-            <li><h5>Crew: {{starship.crew}}</h5></li>
+            <li class="font-weight-bold">Crew: {{starship.crew}}</li>
             <li>MGLT: {{starship.MGLT}}</li>
             <li>Name: {{starship.name}}</li>
             <li>Model: {{starship.model}}</li>
@@ -26,4 +26,5 @@
     </div>
   {{/each}}
 </div>
+
 {{partial 'partials/refresh-btn'}}

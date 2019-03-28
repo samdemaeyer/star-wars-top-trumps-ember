@@ -1,18 +1,1 @@
-// Fix for Roboto font path
-$roboto-font-path: '../assets/';
-
-// Materialize styles
-@import "materialize";
-
-.mobile-nav {
-  display: none;
-  margin: 20px;
-
-  a:first-child {
-    margin-right: 10px;
-  }
-}
-
-@media only screen and (max-width: 992px) {
-  .mobile-nav { display: block; }
-}
+@import "ember-bootstrap/bootstrap";
