@@ -3,7 +3,7 @@
   {{#each collection as |starship i|}}
     <div class="col col-md-6">
       <h2 class="text-center">Wins: {{unless i leftWinCount rightWinCount}}</h2>
-      <div class="card {{if starship.hasBiggerMass 'border-success'}}">
+      <div class="card {{if starship.hasBiggerMass "border-success"}}">
         <div class="card-body">
           <h4 class="card-title mb-2 text-muted">{{starship.name}}</h4>
           <ul>
@@ -27,4 +27,4 @@
   {{/each}}
 </div>
 
-{{partial 'partials/refresh-btn'}}
+<RefreshBtn @shuffle={{action "shuffle"}}></RefreshBtn>

@@ -1,15 +1,24 @@
-{{#bs-navbar type=type backgroundColor=type collapsed=collapsed onCollapse=(action (mut collapsed) true) class="mb-4" as |navbar|}}
+<BsNavbar
+  @type={{type}}
+  @backgroundColor={{type}}
+  @collapsed={{collapsed}}
+  @onCollapse={{action (mut collapsed) true}}
+  @class="mb-4" as |navbar|>
   <div class="navbar-header">
     {{#link-to "index" class="navbar-brand"}}Star Wars Top Trumps{{/link-to}}
   </div>
   {{navbar.toggle}}
   {{#navbar.content}}
     {{#navbar.nav class="ml-auto" as |nav|}}
-      {{#nav.item}}{{#nav.link-to "people"}}<i class="fas fa-user-shield"></i> People{{/nav.link-to}}{{/nav.item}}
-      {{#nav.item}}{{#nav.link-to "starships"}}<i class="fas fa-star"></i> Starships{{/nav.link-to}}{{/nav.item}}
+      {{#nav.item}}
+        {{#nav.link-to "people"}}<i class="fas fa-user-shield"></i> People{{/nav.link-to}}
+      {{/nav.item}}
+      {{#nav.item}}
+        {{#nav.link-to "starships"}}<i class="fas fa-star"></i> Starships{{/nav.link-to}}
+      {{/nav.item}}
     {{/navbar.nav}}
   {{/navbar.content}}
-{{/bs-navbar}}
+</BsNavbar>
 
 <div class="container pt-4">
   {{outlet}}
